@@ -9,5 +9,12 @@ RUN npm install -g openclaw@latest
 # Указываем порт, который будет слушать сервер
 EXPOSE 18789
 
+# Создаем директорию для конфигурации OpenClaw внутри контейнера
+RUN mkdir -p /root/.openclaw
+
+# Копируем твои локальные настройки в системную папку контейнера
+COPY openclaw.json /root/.openclaw/openclaw.json
+COPY agents /root/.openclaw/agents/
+
 # ЗАПУСКАЕМ ШЛЮЗ (GATEWAY) И УКАЗЫВАЕМ ПРАВИЛЬНЫЙ АДРЕС
 CMD ["openclaw", "gateway", "--bind", "lan", "--port", "18789", "--allow-unconfigured"]
