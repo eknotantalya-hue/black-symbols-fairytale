@@ -1,7 +1,7 @@
 services:
   - type: web
     name: black-symbols-gvidon
-    runtime: docker
+    runtime: image
     repo: https://github.com/eknotantalya-hue/black-symbols-fairytale
     plan: starter
     dockerfilePath: ./Dockerfile
@@ -10,3 +10,5 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: PORT
+        value: 18789
