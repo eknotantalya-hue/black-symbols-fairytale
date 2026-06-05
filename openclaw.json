@@ -28,10 +28,13 @@
       }
     }
   },
-  "channels": {
+"channels": {
     "telegram": {
       "botToken": "8525018118:AAHvmODrcbxzWCtILIauDJk_Jbqutud3xn4",
-      "enabled": true
+      "enabled": true,
+      "allowedUsers": [
+        8343759220
+      ]
     }
   },
   "models": {
