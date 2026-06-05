@@ -23,8 +23,7 @@
       "workspace": "/root/.openclaw/workspace",
       "models": {
         "google/gemini-3.1-flash-lite-preview": {
-          "alias": "gemini-3.1-flash-lite-preview",
-          "provider": "google"
+          "alias": "gemini-3.1-flash-lite-preview"
         }
       }
     }
