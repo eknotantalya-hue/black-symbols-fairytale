@@ -1,17 +1,21 @@
 services:
   - type: web
     name: black-symbols-gvidon
+    # МЕНЯЕМ ТАРИФ С STARTER НА STANDARD (У НЕГО 2 ГБ RAM)
+    plan: standard
     runtime: image
     repo: https://github.com/eknotantalya-hue/black-symbols-fairytale
-    plan: starter
     dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
         value: 18789
+      # ГОВОРИМ OPENCLAW, НА КАКОМ ПОРТУ РАБОТАТЬ
       - key: OPENCLAW_GATEWAY_PORT
         value: 18789
-      - key: OPENCLAW_GATEWAY_TOKEN
-        generateValue: true
+      # ГОВОРИМ, ЧТОБЫ СЛУШАЛ ВСЕ АДРЕСА, А НЕ ТОЛЬКО СЕБЯ
+      - key: OPENCLAW_GATEWAY_BIND
+        value: "0.0.0.0"
+      # ТОКЕНЫ, КОТОРЫЕ ТЫ УЖЕ ВВОДИЛ
       - key: TELEGRAM_TOKEN
         sync: false
       - key: GEMINI_API_KEY
