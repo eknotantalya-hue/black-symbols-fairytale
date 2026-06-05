@@ -1,4 +1,4 @@
-FROM node:20-slim
+FROM node:22-slim
 
 # Устанавливаем зависимости
 RUN apt-get update && apt-get install -y git python3 make g++ curl && rm -rf /var/lib/apt/lists/*
