@@ -2,7 +2,7 @@
   "gateway": {
     "mode": "local",
     "port": 18789,
-    "bind": "loopback",
+    "bind": "lan",
     "auth": {
       "mode": "token",
       "token": "21911ec9e734307550b121984ded906982c9ec65cbd7fc02"
@@ -20,10 +20,11 @@
       "model": {
         "primary": "google/gemini-3.1-flash-lite-preview"
       },
-      "workspace": "C:\\Users\\Pc\\.openclaw\\workspace",
+      "workspace": "/root/.openclaw/workspace",
       "models": {
         "google/gemini-3.1-flash-lite-preview": {
-          "alias": "gemini-3.1-flash-lite-preview"
+          "alias": "gemini-3.1-flash-lite-preview",
+          "provider": "google"
         }
       }
     }
