@@ -1,13 +1,13 @@
 FROM node:20-slim
 
-WORKDIR /app
+# Устанавливаем зависимости
+RUN apt-get update && apt-get install -y git python3 make g++ curl && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y git python3 make g++
+# Устанавливаем OpenClaw глобально
+RUN npm install -g openclaw@latest
 
-RUN npm install -g openclaw
-
-COPY . .
-
+# Указываем порт, который будет слушать сервер
 EXPOSE 18789
 
-CMD ["openclaw", "gateway", "--bind", "0.0.0.0:18789"]
+# ЗАПУСКАЕМ ШЛЮЗ (GATEWAY) И УКАЗЫВАЕМ ПРАВИЛЬНЫЙ АДРЕС
+CMD ["openclaw", "gateway", "--bind", "0.0.0.0", "--port", "18789", "--allow-unconfigured"]
