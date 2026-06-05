@@ -10,4 +10,4 @@ RUN npm install -g openclaw@latest
 EXPOSE 18789
 
 # ЗАПУСКАЕМ ШЛЮЗ (GATEWAY) И УКАЗЫВАЕМ ПРАВИЛЬНЫЙ АДРЕС
-CMD ["openclaw", "gateway", "--bind", "auto", "--port", "18789", "--allow-unconfigured"]
+CMD ["openclaw", "gateway", "--bind", "lan", "--port", "18789", "--allow-unconfigured"]
