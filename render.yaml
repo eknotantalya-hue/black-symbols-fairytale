@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: black-symbols-gvidon
+    runtime: image
+    repo: https://github.com/eknotantalya-hue/black-symbols-fairytale
+    plan: starter
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
