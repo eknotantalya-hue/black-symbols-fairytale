@@ -13,8 +13,8 @@ services:
       - key: OPENCLAW_GATEWAY_PORT
         value: 18789
       # ГОВОРИМ, ЧТОБЫ СЛУШАЛ ВСЕ АДРЕСА, А НЕ ТОЛЬКО СЕБЯ
-      - key: OPENCLAW_GATEWAY_BIND
-        value: "auto"
+    - key: OPENCLAW_GATEWAY_BIND
+        value: "lan"
       # ТОКЕНЫ, КОТОРЫЕ ТЫ УЖЕ ВВОДИЛ
       - key: TELEGRAM_TOKEN
         sync: false
