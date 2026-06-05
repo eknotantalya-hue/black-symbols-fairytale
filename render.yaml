@@ -6,9 +6,13 @@ services:
     plan: starter
     dockerfilePath: ./Dockerfile
     envVars:
+      - key: PORT
+        value: 18789
+      - key: OPENCLAW_GATEWAY_PORT
+        value: 18789
+      - key: OPENCLAW_GATEWAY_TOKEN
+        generateValue: true
       - key: TELEGRAM_TOKEN
         sync: false
       - key: GEMINI_API_KEY
         sync: false
-      - key: PORT
-        value: 18789
