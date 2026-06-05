@@ -14,7 +14,7 @@ services:
         value: 18789
       # ГОВОРИМ, ЧТОБЫ СЛУШАЛ ВСЕ АДРЕСА, А НЕ ТОЛЬКО СЕБЯ
       - key: OPENCLAW_GATEWAY_BIND
-        value: "0.0.0.0"
+        value: "auto"
       # ТОКЕНЫ, КОТОРЫЕ ТЫ УЖЕ ВВОДИЛ
       - key: TELEGRAM_TOKEN
         sync: false
