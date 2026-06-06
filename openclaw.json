@@ -18,12 +18,12 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "google/gemini-2.5-flash"
+        "primary": "google/gemini-2-flash"
       },
       "workspace": "/root/.openclaw/workspace",
       "models": {
-        "google/gemini-2.5-flash": {
-          "alias": "gemini-2.5-flash"
+        "google/gemini-2-flash": {
+          "alias": "gemini-2-flash"
         }
       }
     }
@@ -41,8 +41,8 @@
         "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
         "models": [
           {
-            "id": "gemini-2.5-flash",
-            "name": "gemini-2.5-flash",
+            "id": "gemini-2-flash",
+            "name": "gemini-2-flash",
             "reasoning": false,
             "input": [
               "text"
