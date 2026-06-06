@@ -86,9 +86,7 @@
     "channel": "stable",
     "checkOnStart": true
   },
-  "skills": {
-    "allowBundled": []
-  },
+
   "meta": {
     "lastTouchedVersion": "2026.4.2",
     "lastTouchedAt": "2026-06-05T19:21:34.992Z"
