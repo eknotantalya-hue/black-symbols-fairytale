@@ -29,11 +29,11 @@
     }
   },
 "channels": {
-    "telegram": {
-      "botToken": "8525018118:AAHvmODrcbxzWCtILIauDJk_Jbqutud3xn4",
-      "enabled": true
-    }
-  },
+  "telegram": {
+    "botToken": "${TELEGRAM_TOKEN}",
+    "enabled": true
+  }
+},
   "models": {
     "mode": "merge",
     "providers": {
