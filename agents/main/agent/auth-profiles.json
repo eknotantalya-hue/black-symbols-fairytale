@@ -4,7 +4,7 @@
     "google:default": {
       "type": "api_key",
       "provider": "google",
-      "key": "AIzaSyDRa-vRCGMoq5FZXpCP3C403MoqH2vKd5c"
+      "key": "${GOOGLE_API_KEY}"
     }
   },
   "lastGood": {
