@@ -41,6 +41,26 @@ find "$TARGET_WORKSPACE" -maxdepth 2 -type f | sort
 
 echo "[fairytale] launching OpenClaw gateway"
 
+echo "[fairytale] configuring Telegram owner access"
+
+mkdir -p /root/.openclaw/credentials
+
+if [ -z "${OWNER_TELEGRAM_ID:-}" ]; then
+  echo "[fairytale][FATAL] OWNER_TELEGRAM_ID is not set"
+  exit 1
+fi
+
+cat > /root/.openclaw/credentials/telegram-default-allowFrom.json <<EOF
+{
+  "version": 1,
+  "allowFrom": [
+    "${OWNER_TELEGRAM_ID}"
+  ]
+}
+EOF
+
+echo "[fairytale] Telegram owner allowed: ${OWNER_TELEGRAM_ID}"
+
 exec openclaw gateway \
   --bind lan \
   --port 18789
