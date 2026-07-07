@@ -5,7 +5,7 @@
     "bind": "lan",
     "auth": {
       "mode": "token",
-      "token": "21911ec9e734307550b121984ded906982c9ec65cbd7fc02"
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
     },
     "controlUi": {
       "allowInsecureAuth": true,
