@@ -34,6 +34,11 @@
     "enabled": true
   }
 },
+  "commands": {
+  "ownerAllowFrom": [
+    "telegram:722957274"
+  ]
+},
   "models": {
     "mode": "merge",
     "providers": {
